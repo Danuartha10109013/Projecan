@@ -18,8 +18,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'tanggal_lahir',
+        'alamat',
+        'phone',
+        'image', // Kolom untuk menyimpan nama file gambar
+        'password', // Jika ingin mengupdate password pengguna
     ];
 
     /**

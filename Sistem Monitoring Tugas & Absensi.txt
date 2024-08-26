@@ -1,0 +1,11 @@
+Sistem Monitoring Tugas & Absensi
+List yang dibutuhkan
+1. Asset (meliputi profil perusahaan)
+2. Proses Bisinis System yang diinginkan (berupa use case atau gambaran umum)
+3. penjelasan fitur yang diutamakan
+
+
+Fiturr yang harus ada
+Absensi dengan lokasi/face ID
+Monitoring Tugas -> admin
+Kirim Tugas -> Dosen
