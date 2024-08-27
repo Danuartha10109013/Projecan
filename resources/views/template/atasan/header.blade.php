@@ -21,7 +21,7 @@
             </nav>
           </li>
           <li class="nav-item">
-            <a href="chart-chartjs.html" class="nav-link"><i class="typcn typcn-input-checked"></i> Kelola Tugas</a>
+            <a href="{{route('atasan.tugas')}}" class="nav-link"><i class="typcn typcn-input-checked"></i> Kelola Tugas</a>
           </li>
           <li class="nav-item">
             <a href="form-elements.html" class="nav-link"><i class="typcn typcn-document"></i> Laporan Absensi</a>

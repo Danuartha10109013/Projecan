@@ -5,6 +5,7 @@ use App\Http\Controllers\AtasanController;
 use App\Http\Controllers\KelolaPegawaiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TasksAtController;
 use App\Http\Controllers\TasksController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AutoLogout;
@@ -25,6 +26,9 @@ Route::middleware([AutoLogout::class])->group(function () {
             Route::get('/', [ProfileController::class, 'index_atasan'])->name('profile');
             Route::get('/edit-profile', [ProfileController::class, 'edit_atasan'])->name('profile-edit');
             Route::put('/update-profile/{id}', [ProfileController::class, 'update_atasan'])->name('profile-update');
+        });
+        Route::prefix('tugas')->group(function () {
+            Route::get('/', [TasksAtController::class, 'index'])->name('tugas');
         });
     });
     //Admin Route
