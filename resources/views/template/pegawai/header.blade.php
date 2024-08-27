@@ -29,9 +29,9 @@
               <div class="container">
                 <div>
                   <nav class="nav">
-                    <a href="elem-buttons.html" class="nav-link">Belum Dikerjakan</a>
-                    <a href="elem-dropdown.html" class="nav-link">Sudah Selesai </a>
-                    <a href="elem-icons.html" class="nav-link">Tidak Selesai</a>
+                    <a href="{{route('pegawai.tasks-not-complite')}}" class="nav-link">Belum Dikerjakan</a>
+                    <a href="{{route('pegawai.tasks-complite')}}" class="nav-link">Sudah Selesai </a>
+                    <a href="{{route('pegawai.tasks-revision')}}" class="nav-link">Revisi</a>
                   </nav>
                 </div>
               </div><!-- container -->

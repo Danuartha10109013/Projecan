@@ -46,6 +46,22 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'nidn' => '1234567891',
+                'name' => 'Atasan User',
+                'role' => '2', // 1 for pegawai
+                'status' => 'active',
+                'email' => 'atasan@example.com',
+                'jabatan' => 'Atasan',
+                'phone' => '085150009700',
+                'alamat' => 'Pegawai Address',
+                'tanggal_lahir' => '1990-01-01',
+                'email_verified_at' => now(),
+                'password' => Hash::make('atasan123'), // password should be hashed
+                // 'remember_token' => \Str::random(10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

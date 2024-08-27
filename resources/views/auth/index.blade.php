@@ -36,14 +36,24 @@
                         {{ session('success') }}
                     </div>
                 @endif
+				
                     <br>
                     <br>
 					<img width="90%" src="{{asset('logo')}}/unismu_logo.png" alt="IMG">
 				</div>
+				
 				<form class="login100-form validate-form" action="{{ route('login-proses') }}" method="POST">
 					@csrf
 					<span class="login100-form-title">
 						Login
+						@if(session('failed'))
+					<div style="color: black;z-index: 999;" class="alert alert-failed alert-dismissible fade show" role="alert">
+						{{ session('success') }}
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span color="red" aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				@endif
 					</span>
 				
 					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">

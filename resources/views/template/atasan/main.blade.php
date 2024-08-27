@@ -10,11 +10,6 @@
 
       gtag('config', 'UA-90680653-2');
     </script>
-    <style>
-      body{
-        background:#eee;
-      }
-    </style>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -61,11 +56,11 @@
   </head>
   <body>
 
-@include('template.admin.header')
+  @include('template.atasan.header')
 
-    @yield('content-admin')
+    @yield('content-atasan')
 
-    @include('template.admin.footer')
+    @include('template.atasan.footer')
 
 
     <script src="{{asset('templates')}}/lib/jquery/jquery.min.js"></script>

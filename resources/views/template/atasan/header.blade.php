@@ -11,13 +11,13 @@
         </div><!-- az-header-menu-header -->
         <ul class="nav">
           <li class="nav-item active show">
-            <a href="{{route('admin.dashboard')}}" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
+            <a href="{{route('atasan.dashboard')}}" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
           </li>
           <li class="nav-item">
             <a href="" class="nav-link with-sub"><i class="typcn typcn-user"></i> Pegawai</a>
             <nav class="az-menu-sub">
-              <a href="{{route('admin.kelola-pegawai-create')}}" class="nav-link">Tambah Pegawai</a>
-              <a href="{{route('admin.kelola-pegawai')}}" class="nav-link">Kelola Pegawai</a>
+              <a href="page-signin.html" class="nav-link">Tambah Pegawai</a>
+              <a href="page-signup.html" class="nav-link">Kelola Pegawai</a>
             </nav>
           </li>
           <li class="nav-item">
@@ -43,15 +43,15 @@
               </div><!-- az-img-user -->
               <h6>{{Auth::user()->name}}</h6>
               <span>
-                @if (Auth::user()->role == 0)
-                    Admin
+                @if (Auth::user()->role == 2)
+                    Atasan
                 @endif
             </span>
             
             </div><!-- az-header-profile -->
 
-            <a href="{{route('admin.profile')}}" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
-            <a href="{{ route('admin.profile-edit', Auth::user()->id) }}" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
+            <a href="{{route('atasan.profile')}}" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
+            <a href="{{ route('atasan.profile-edit', Auth::user()->id) }}" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               @csrf
           </form>

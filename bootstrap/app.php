@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\AdminMiddelware;
+use App\Http\Middleware\AtasanMiddelware;
 use App\Http\Middleware\PegawaiMiddelware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -13,6 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->appendToGroup('atasan', [
+            AtasanMiddelware::class,
+            
+        ]);
         $middleware->appendToGroup('admin', [
             AdminMiddelware::class,
             

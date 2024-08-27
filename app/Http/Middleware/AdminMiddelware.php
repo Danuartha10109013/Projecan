@@ -17,7 +17,7 @@ class AdminMiddelware
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check()) {
-            if (Auth::user()->role == 0){
+            if (Auth::user()->role == 0 && Auth::user()->status == "active"){
                 return $next($request);
             }
             return response()->view('errors.custom', ['message' => 'Anda Bukan Admin'], 403);
